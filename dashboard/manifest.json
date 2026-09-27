@@ -1,0 +1,14 @@
+{
+  "name": "gmail-mailbox",
+  "label": "Mailbox",
+  "description": "Gmail inbox stats, daily briefings and a draft-request queue.",
+  "icon": "MessageSquare",
+  "version": "0.1.0",
+  "tab": {
+    "path": "/gmail-mailbox",
+    "position": "after:skills"
+  },
+  "entry": "dist/index.js",
+  "css": "dist/style.css",
+  "api": "plugin_api.py"
+}

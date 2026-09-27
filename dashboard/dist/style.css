@@ -1,0 +1,97 @@
+.gm-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gm-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.gm-stat-card { padding: 0; }
+.gm-stat-label { font-size: 0.75rem; color: var(--color-muted-foreground); }
+.gm-stat-value { font-size: 1.75rem; font-weight: 600; }
+.gm-tone-warn { color: var(--color-destructive); }
+
+.gm-section { margin-top: 0; }
+
+.gm-sparkline {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 90px;
+}
+.gm-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+.gm-bar {
+  width: 100%;
+  background: var(--color-primary);
+  border-radius: 3px 3px 0 0;
+  min-height: 3px;
+}
+.gm-bar-label {
+  font-size: 0.6rem;
+  color: var(--color-muted-foreground);
+  margin-top: 2px;
+}
+
+.gm-label-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.gm-label-row:last-child { border-bottom: none; }
+
+.gm-report { padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); }
+.gm-report:last-child { border-bottom: none; }
+.gm-report-title { font-weight: 600; }
+.gm-report-meta { font-size: 0.7rem; color: var(--color-muted-foreground); margin-bottom: 0.25rem; }
+.gm-report-body { white-space: pre-wrap; font-size: 0.85rem; }
+
+.gm-search-row { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+
+.gm-message-list { display: flex; flex-direction: column; gap: 0.25rem; }
+.gm-message-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius, 0.5rem);
+  background: var(--color-card);
+}
+.gm-message-main { flex: 1; cursor: pointer; min-width: 0; }
+.gm-message-subject { font-weight: 500; }
+.gm-message-from { font-size: 0.75rem; color: var(--color-muted-foreground); }
+.gm-message-snippet {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.gm-unread-badge { margin-right: 0.25rem; }
+
+.gm-body {
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.gm-code {
+  background: var(--color-muted);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius, 0.5rem);
+  font-size: 0.85rem;
+}

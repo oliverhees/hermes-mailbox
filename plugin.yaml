@@ -1,0 +1,44 @@
+name: gmail-mailbox
+version: "0.1.0"
+description: >
+  Connects a Gmail (personal or Google Workspace) account to Hermes Agent.
+  Gives the agent native tools to search, read, label, draft and send mail,
+  ships a "Mailbox" tab in the Hermes Dashboard with live inbox stats and a
+  request queue, and works with Hermes' own cron scheduler for daily
+  briefings.
+author: oliverhees
+license: MIT
+tags: [email, gmail, dashboard, productivity]
+
+requires_env:
+  - name: GMAIL_OAUTH_CLIENT_ID
+    description: >
+      OAuth 2.0 Client ID (type "Desktop app") from a Google Cloud project
+      with the Gmail API enabled. See docs/SETUP.md.
+    prompt: "Gmail OAuth Client ID"
+    password: false
+  - name: GMAIL_OAUTH_CLIENT_SECRET
+    description: "OAuth 2.0 Client Secret matching the Client ID above."
+    prompt: "Gmail OAuth Client Secret"
+    password: true
+
+optional_env:
+  - name: GMAIL_ACCOUNT_LABEL
+    description: >
+      Friendly label shown in tool results and the dashboard when you run
+      more than one instance of this plugin for different mailboxes.
+    prompt: "Account label (optional)"
+    password: false
+
+provides_tools:
+  - gmail_list_messages
+  - gmail_search_messages
+  - gmail_get_message
+  - gmail_list_labels
+  - gmail_create_draft
+  - gmail_reply
+  - gmail_send_message
+  - gmail_sync_stats
+  - gmail_save_report
+  - gmail_list_pending_requests
+  - gmail_complete_request
