@@ -40,7 +40,15 @@ This opens a Google consent screen and stores a refresh token under
 client secret to enter model context - Hermes never sees it, only this
 plugin's own OAuth code does.
 
-## 4. See the Mailbox dashboard tab
+## 4. See the Mailbox pane in Hermes Desktop
+
+Open Hermes Desktop. A **Mailbox** pane (docked right) and a small
+unread-count chip in the status bar appear automatically - desktop
+plugins under `~/.hermes/plugins/<id>/desktop/plugin.js` are picked up
+within seconds, no restart needed. If it doesn't show up, check
+**Capabilities -> Plugins -> Installed** and enable it there.
+
+## 5. See the Mailbox dashboard tab (browser)
 
 ```bash
 hermes dashboard
@@ -50,13 +58,14 @@ Open it in a browser; a **Mailbox** tab appears in the nav (bundled
 plugins are picked up automatically - if you installed this after the
 dashboard was already running, hit
 `curl http://127.0.0.1:9119/api/dashboard/plugins/rescan` or restart it).
+This is the same data as the desktop pane - both call the same backend.
 
-## 5. Multiple mailboxes
+## 6. Multiple mailboxes
 
 Install the plugin under a second name (or a second `~/.hermes/plugins/`
 directory) and set a different `GMAIL_ACCOUNT_LABEL`, `GMAIL_OAUTH_CLIENT_ID`
 etc. per instance - each gets its own token file and its own dashboard tab.
 
-## 6. Daily briefing automation
+## 7. Daily briefing automation
 
 See `CRON_EXAMPLE.md` for a ready-to-use `cronjob_manage` prompt.
