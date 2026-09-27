@@ -11,10 +11,10 @@ import json
 from collections import Counter
 from datetime import datetime, timezone
 
-import client
-import store
-from auth import NotAuthenticatedError
-from config import account_label
+import gmail_mailbox_client as client
+import gmail_mailbox_store as store
+from gmail_mailbox_auth import NotAuthenticatedError
+from gmail_mailbox_config import account_label
 
 
 def _ok(data) -> str:

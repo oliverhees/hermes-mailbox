@@ -17,7 +17,7 @@ import time
 from contextlib import contextmanager
 from typing import Iterator, Optional
 
-from config import db_path
+from gmail_mailbox_config import db_path
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS stats_snapshots (

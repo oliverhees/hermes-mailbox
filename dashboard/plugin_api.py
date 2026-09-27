@@ -19,10 +19,10 @@ _PLUGIN_ROOT = str(Path(__file__).resolve().parent.parent)
 if _PLUGIN_ROOT not in sys.path:
     sys.path.insert(0, _PLUGIN_ROOT)
 
-import client  # noqa: E402
-import store  # noqa: E402
-from auth import NotAuthenticatedError, is_authenticated  # noqa: E402
-from config import account_label  # noqa: E402
+import gmail_mailbox_client as client  # noqa: E402
+import gmail_mailbox_store as store  # noqa: E402
+from gmail_mailbox_auth import NotAuthenticatedError, is_authenticated  # noqa: E402
+from gmail_mailbox_config import account_label  # noqa: E402
 
 router = APIRouter()
 

@@ -14,8 +14,8 @@ def _fresh_home(tmp_path):
     os.environ["HERMES_HOME"] = str(tmp_path)
     import importlib
 
-    import config
-    import store
+    import gmail_mailbox_config as config
+    import gmail_mailbox_store as store
 
     importlib.reload(config)
     importlib.reload(store)

@@ -10,7 +10,7 @@ from typing import Any, Optional
 
 from googleapiclient.discovery import build
 
-from auth import load_credentials
+from gmail_mailbox_auth import load_credentials
 
 _HEADER_KEYS = ("Subject", "From", "To", "Date", "Message-Id", "References")
 
